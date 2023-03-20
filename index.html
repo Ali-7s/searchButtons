@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Multi Searcher</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div id="wrapper">
+    <div id="content">
+        <h1>Multi Searcher</h1>
+
+        <div class="search-section">
+            <h2>AirBnB Search</h2>
+            <!-- AirBnB Search Form -->
+            <label for="property_type">Property Type</label>
+            <select id="property_type" name="property_type">
+                <option value="apartment">Apartment</option>
+                <option value="house">House</option>
+            </select>
+
+            <label for="bedrooms">Bedrooms:</label>
+            <input id="bedrooms" type="number" name="bedrooms" min="1" max="10" value="1" />
+
+            <label for="beds">Beds:</label>
+            <input id="beds" type="number" name="bathrooms" min="1" max="10" value="1" />
+            <button onclick="searchAirbnb()" id="search" type="submit">Search</button>
+        </div>
+
+        <div class="search-section">
+            <h2>MFlix Search</h2>
+            <!-- MFlix Search Form -->
+            <label for="movie_title">Movie Title:</label>
+            <input id="movie_title" type="text" name="movie_title" />
+            <button onclick="searchMovie()" id="search_mflix" type="submit">Search</button>
+        </div>
+
+        <div class="search-section">
+            <h2>Restaurant Search</h2>
+            <!-- Restaurant Search Form -->
+            <label for="restaurant_name">Restaurant Name:</label>
+            <input id="restaurant_name" type="text" name="restaurant_name" />
+            <button onclick="searchRestaurant()" id="search_restaurants" type="submit">Search</button>
+        </div>
+    </div>
+
+    <div id="results-section">
+        <h2>Search Results</h2>
+        <div id="results" class="results-container">
+            <p class="results-placeholder">Your search results will be displayed here!</p>
+        </div>
+    </div>
+</div>
+<script src="index.mjs"></script>
+</body>
+</html>
